@@ -5,17 +5,19 @@ import com.jkard.jkexperiment.service.impl.ParentTestServiceImpl;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
 
 /**** imports ****/
+@Component
 @Aspect //定义切面
 public class MyAspect {
 
     //引入,它的作用是引入新的类来增强原有的服务
-    @DeclareParents(value= "com.jkard.jkexperiment.service.impl.TestServiceImpl+",defaultImpl= ParentTestServiceImpl.class)
-    public IParentTestService parentTestService;
+    @DeclareParents(value= "com.jkard.jkexperiment.service.impl.TestServiceImpl",defaultImpl= ParentTestServiceImpl.class)
+    IParentTestService parentTestService;
 
     //定义切点
-    @Pointcut("execution(* com.jkard.jkexperiment.service.impl.TestServiceImpl.print(..))")
+    @Pointcut("execution(* com.jkard.jkexperiment.service.impl.TestServiceImpl.aspectPrint(..))")
     public void pointCut() {
     }
 
@@ -25,13 +27,13 @@ public class MyAspect {
     }
 
     //获取参数
-    //方式1：切点处加入对应的正则式
+    //方式1：切点处加入对应的正则式比如args(content)
     //方式2：对于非环绕通知还可以使用一个连接点（JoinPoint）类型的参数，通过它也可以获取参数
     //正则式pointCut() && args(user)中，pointCut()表示启用原来定义切点的规则，并且约定将连接点（目标对象方法）名称为user的参数传递进来。这里要注意，JoinPoint类型的参数对于非环绕通知而言，Spring AOP会自动地把它传递到通知中；对于环绕通知而言，可以使用ProceedingJoinPoint类型的参数。
     @Before("pointCut() && args(content)")
     public void beforeParam(JoinPoint point, String content) {
         Object[] args = point.getArgs();
-        System.out.println("aop before args ......");
+        System.out.println("aop before args ："+content);
     }
 
     //环绕通知

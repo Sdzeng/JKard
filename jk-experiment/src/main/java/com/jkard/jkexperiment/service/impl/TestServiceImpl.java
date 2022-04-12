@@ -7,7 +7,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestServiceImpl implements ITestService {
     @Override
-    public void print(String content) {
+    public void proxyPrint() {
+        System.out.println("哈哈哈");
+    }
+
+    @Override
+    public void aspectPrint(String content) {
         System.out.println(content);
     }
 }

@@ -27,9 +27,9 @@ public class ProxyController {
      */
     @ApiOperation("测试代理")
     @PostMapping("/testProxy")
-    public String testProxy(String content) {//@RequestBody @Validated ClustersStatisticsBo bo, @RequestHeader(required = true) String token
+    public String testProxy() {//@RequestBody @Validated ClustersStatisticsBo bo, @RequestHeader(required = true) String token
         ITestService proxy = (ITestService) ProxyServiceImpl.getProxy(_testService, new MyInterceptor());
-        proxy.print(content);
+        proxy.proxyPrint();
         return "great";
     }
 }
