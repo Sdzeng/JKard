@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 public class TestServiceImpl implements ITestService {
     @Override
     public void print() {
-        System.out.printf("哈哈哈");
+        System.out.println("哈哈哈");
     }
 }

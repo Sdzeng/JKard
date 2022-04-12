@@ -1,7 +1,11 @@
 package com.jkard.jkexperiment.controller;
 
+import com.jkard.jkexperiment.common.MyInterceptor;
+import com.jkard.jkexperiment.service.ITestService;
+import com.jkard.jkexperiment.service.impl.ProxyServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,17 +18,17 @@ import org.springframework.web.bind.annotation.RestController;
 //@CrossOrigin
 public class ProxyController {
 
-//    @Autowired
-//    private ITestService _testService;
+    @Autowired
+    private ITestService _testService;
 
     /**
-     * 客户群统计-按群统计
+     * 客测试代理
      */
     @ApiOperation("测试代理")
-    @PostMapping("/cluster")
-    public String clustersStatisticsCluster() {//@RequestBody @Validated ClustersStatisticsBo bo, @RequestHeader(required = true) String token
-//        ITestService proxy = (ITestService) ProxyService.getProxy(_testService, new MyInterceptor());
-//        proxy.print();
+    @PostMapping("/testProxy")
+    public String testProxy() {//@RequestBody @Validated ClustersStatisticsBo bo, @RequestHeader(required = true) String token
+        ITestService proxy = (ITestService) ProxyServiceImpl.getProxy(_testService, new MyInterceptor());
+        proxy.print();
         return "great";
     }
 }
