@@ -1,4 +1,4 @@
-package com.jkard.jkexperiment.common;
+package com.jkard.jkexperiment.common.proxy;
 
 import java.lang.reflect.InvocationTargetException;
 

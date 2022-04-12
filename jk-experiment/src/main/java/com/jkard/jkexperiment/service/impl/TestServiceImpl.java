@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestServiceImpl implements ITestService {
     @Override
-    public void print() {
-        System.out.println("哈哈哈");
+    public void print(String content) {
+        System.out.println(content);
     }
 }

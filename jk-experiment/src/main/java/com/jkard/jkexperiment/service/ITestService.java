@@ -1,7 +1,5 @@
 package com.jkard.jkexperiment.service;
 
 public interface ITestService {
-
-
-    void print();
+    void print(String content);
 }

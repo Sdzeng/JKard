@@ -11,7 +11,7 @@
 
 
     <properties>
-        <abeanbdp.version>3.3.0</abeanbdp.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -249,73 +249,7 @@
                 <version>${log4j2.version}</version>
             </dependency>
 
-            <!-- 核心模块 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-core</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
 
-            <!-- 接口模块 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-swagger</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- 安全模块 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-security</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- 权限范围 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-datascope</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- 多数据源 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-datasource</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- 日志记录 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-log</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- 缓存服务 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-redis</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-mybatis-plus</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-es</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-sso</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
 
             <!-- rocketmq消息队列 -->
             <dependency>
@@ -326,53 +260,6 @@
 
 
 
-            <!-- 系统接口核心公共包 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-api-core</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- SSO接口 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-authorization</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- crypto -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-common-api-crypto</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- 系统接口 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-api-system</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- BDP原接口 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-api-modules</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <!-- SSO接口 -->
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-api-sso</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.abeanbdp</groupId>
-                <artifactId>abeanbdp-api-business</artifactId>
-                <version>${abeanbdp.version}</version>
-            </dependency>
 
             <!-- mybatis-plus 增强CRUD -->
             <dependency>
@@ -441,23 +328,7 @@
                 <version>${httpmime.version}</version>
             </dependency>
 
-            <!--            <dependency>-->
-            <!--                <groupId>com.abeanbdp</groupId>-->
-            <!--                <artifactId>abeanbdp-modules-autobuilder</artifactId>-->
-            <!--                <version>${abeanbdp.version}</version>-->
-            <!--            </dependency>-->
 
-            <!--            <dependency>-->
-            <!--                <groupId>com.abeanbdp</groupId>-->
-            <!--                <artifactId>abeanbdp-modules-bus</artifactId>-->
-            <!--                <version>${abeanbdp.version}</version>-->
-            <!--            </dependency>-->
-
-            <!--            <dependency>-->
-            <!--                <groupId>com.abeanbdp</groupId>-->
-            <!--                <artifactId>abeanbdp-modules-generator</artifactId>-->
-            <!--                <version>${abeanbdp.version}</version>-->
-            <!--            </dependency>-->
 
             <!-- starter-security配置 -->
             <dependency>
