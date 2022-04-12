@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Validated
+
 @Api(tags = "Aop")
 @RestController
 @RequestMapping("/aspect")
@@ -35,7 +35,7 @@ public class AspectController {
      */
     @ApiOperation("测试Aop")
     @PostMapping("/testAspect")
-    public String testAspect(@Validated String content) {//@RequestBody @Validated ClustersStatisticsBo bo, @RequestHeader(required = true) String token
+    public String testAspect(String content) {//@RequestBody @Validated ClustersStatisticsBo bo, @RequestHeader(required = true) String token
         _testService.aspectPrint(content);
 
         return "Done";
@@ -47,7 +47,7 @@ public class AspectController {
      */
     @ApiOperation("测试Aop引入")
     @PostMapping("/testAspectParent")
-    public String testAspectParent(@Validated String content) {//@RequestBody @Validated ClustersStatisticsBo bo, @RequestHeader(required = true) String token
+    public String testAspectParent(String content) {
 
         //测试引入
         IParentTestService parentTestService = (IParentTestService) _testService;
