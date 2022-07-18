@@ -2,6 +2,7 @@ package com.jkard.jkexperiment.service.impl;
 
 import com.jkard.jkexperiment.common.proxy.Interceptor;
 import com.jkard.jkexperiment.common.proxy.Invocation;
+import org.springframework.context.annotation.Bean;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
